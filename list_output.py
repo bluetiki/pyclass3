@@ -50,8 +50,6 @@ def read_yaml_file(yaml_file):
 
 def main():
     file_name = str(generate_strings(1)).lstrip("['").rstrip("']")
-    print (type(file_name))
-    print (file_name)
     output_files(file_name,generate_list(10))
     pp(read_json_file(file_name + ".json"))
     pp(read_yaml_file(file_name + ".yml"))
