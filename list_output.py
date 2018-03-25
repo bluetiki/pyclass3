@@ -28,7 +28,7 @@ def generate_list(num_items):
     my_list = generate_ints(num_items,10000) + generate_strings(num_items)
     my_list.append({})
     for i in range(0,num_items):
-        my_list[-1] [str(generate_strings(1)).lstrip("['").rstrip("']")] = str(generate_ints(1,1000000))
+        my_list[-1] [str(generate_strings(1)).lstrip("['").rstrip("']")] = str(generate_ints(1,1000000)).lstrip("'[").rstrip("']")
     return my_list
 
 #convert list to json and yaml formats and output with filename file_name
