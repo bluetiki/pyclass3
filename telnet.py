@@ -2,6 +2,7 @@
 
 import telnetlib
 import time
+import getpass
 
 
 TELNET_PORT = 23
@@ -26,11 +27,11 @@ def send_cmd(cmd,conn):
 
 def main():
 
-    ip_addr = '184.105.247.70'
-    username = 'pyclass'
-    password = '88newclass'
+    ip = input('Please input target ip address: ')
+    user = input('Please enter your username: ')
+    pw = getpass.getpass()
 
-    conn = connect(ip_addr,username,password)
+    conn = connect(ip,user,pw)
     
     send_cmd('ter len 0',conn)
     out  = send_cmd('show ver',conn)
